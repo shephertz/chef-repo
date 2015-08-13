@@ -1,0 +1,17 @@
+{
+  "name": "webNode",
+  "description": "Setup Web Node",
+  "default_attributes": {
+    "apache": {
+      "mod_proxy": {
+        "enable": true,
+        "base": "/",
+        "target": "http://localhost:8080/"
+      }
+    }
+  },
+  "run_list": [
+    "recipe[apt]",
+    "recipe[setupWebNode]"
+  ]
+}

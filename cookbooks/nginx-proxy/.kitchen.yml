@@ -1,0 +1,22 @@
+---
+driver_plugin: vagrant
+driver_config:
+  require_chef_omnibus: true
+
+platforms:
+- name: ubuntu-12.04
+  driver_config:
+    box: opscode_ubuntu-12.04_provisionerless
+    box_url: http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_ubuntu-12.04_chef-provisionerless.box
+
+suites:
+- name: apache
+  run_list:
+    - recipe[apt]
+    - recipe[nginx-proxy-test]
+  attributes:
+    apache:
+      default_site_enabled: true
+    nginx_proxy:
+      proxies:
+        apache.localdomain: apache

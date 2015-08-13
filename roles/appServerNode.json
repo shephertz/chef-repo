@@ -1,0 +1,10 @@
+{
+  "name": "appServerNode",
+  "description": "Setup App Server Node",
+  "run_list": [
+    "recipe[apt]",
+    "recipe[java]",
+    "recipe[tomcat]",
+    "recipe[setupAppServerNode]"
+  ]
+}

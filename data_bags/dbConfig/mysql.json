@@ -1,0 +1,9 @@
+{
+  "id": "mysql",
+  "port": "3306",
+  "rootPassword": "root",
+  "dbName": "app42",
+  "user": "root",
+  "password": "root",
+  "address": "127.0.0.1"
+}

@@ -1,0 +1,7 @@
+<VirtualHost *:<%= @port %>>
+    ProxyPreserveHost On
+
+    ProxyPass <%= @proxypass_base %> <%= @proxypass_target %>
+    ProxyPassReverse <%= @proxypass_base %> <%= @proxypass_target %>
+
+</VirtualHost>

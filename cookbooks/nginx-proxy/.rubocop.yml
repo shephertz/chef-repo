@@ -1,0 +1,9 @@
+AllCops:
+  Excludes:
+    - tmp/**
+
+Documentation:
+  Enabled: false
+
+ClassAndModuleChildren:
+  Enabled: false

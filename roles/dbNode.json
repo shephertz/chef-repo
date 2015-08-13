@@ -1,0 +1,8 @@
+{
+  "name": "dbNode",
+  "description": "Setup DB Node",
+  "run_list": [
+    "recipe[apt]",
+    "recipe[setupDBNode]"
+  ]
+}
